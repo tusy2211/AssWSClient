@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="giaodich" type="tns:giaodich" />
+
+<xs:element name="giaodichResponse" type="tns:giaodichResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="lichsu" type="tns:lichsu" />
+
+<xs:element name="lichsuResponse" type="tns:lichsuResponse" />
+
+<xs:element name="lichsugd" type="tns:lichsugd" />
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giaodich">
+<xs:sequence>
+<xs:element name="maKHgui" type="xs:string" minOccurs="0" />
+<xs:element name="maKHnhan" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="sotien" type="xs:double" minOccurs="0" />
+<xs:element name="choice" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giaodichResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lichsu">
+<xs:sequence>
+<xs:element name="start" type="xs:dateTime" minOccurs="0" />
+<xs:element name="end" type="xs:dateTime" minOccurs="0" />
+<xs:element name="khGui" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lichsuResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:lichsugd" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lichsugd">
+<xs:sequence>
+<xs:element name="magiaodich" type="xs:int" minOccurs="0" />
+<xs:element name="nguoigui" type="xs:string" minOccurs="0" />
+<xs:element name="nguoinhan" type="xs:string" minOccurs="0" />
+<xs:element name="phigiaodich" type="xs:double" minOccurs="0" />
+<xs:element name="sogd" type="xs:int" minOccurs="0" />
+<xs:element name="sotiengiaodich" type="xs:double" minOccurs="0" />
+<xs:element name="thoigiangiaodich" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
